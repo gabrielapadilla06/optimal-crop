@@ -1,0 +1,9 @@
+{
+    "functions": {
+      "src/app/api/predict/route.ts": {
+        "runtime": "nodejs18.x",
+        "maxDuration": 30
+      }
+    },
+    "buildCommand": "pip install -r src/python/requirements.txt && next build"
+  }
