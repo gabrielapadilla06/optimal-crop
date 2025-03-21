@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "vercel-build": "pip install -r src/python/requirements.txt && next build",
     "start": "next start",
     "lint": "next lint"
   },
