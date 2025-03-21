@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "vercel-build": "pip install -r src/python/requirements.txt && npm install --legacy-peer-deps && next build",
+    "vercel-build": "pip install -r src/python/requirements.txt && npm install --force && next build",
     "start": "next start",
     "lint": "next lint"
   },
