@@ -74,7 +74,7 @@ export default function Home() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="N">Nitrogen (N)</Label>
+                <Label htmlFor="N">Nitrogen (N) [0 - 140]</Label>
                 <Input
                   id="N"
                   name="N"
@@ -87,78 +87,78 @@ export default function Home() {
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="P">Phosphorus (P)</Label>
+                <Label htmlFor="P">Phosphorus (P) [5 - 145]</Label>
                 <Input
                   id="P"
                   name="P"
                   type="number"
                   step="0.01"
-                  placeholder="0.0"
+                  placeholder="5.0"
                   value={formData.P}
                   onChange={handleChange}
                   required
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="K">Potassium (K)</Label>
+                <Label htmlFor="K">Potassium (K) [5 - 205]</Label>
                 <Input
                   id="K"
                   name="K"
                   type="number"
                   step="0.01"
-                  placeholder="0.0"
+                  placeholder="5.0"
                   value={formData.K}
                   onChange={handleChange}
                   required
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="temperature">Temperature (°C)</Label>
+                <Label htmlFor="temperature">Temperature (°C) [10 - 44]</Label>
                 <Input
                   id="temperature"
                   name="temperature"
                   type="number"
                   step="0.01"
-                  placeholder="0.0"
+                  placeholder="10.0"
                   value={formData.temperature}
                   onChange={handleChange}
                   required
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="humidity">Humidity (%)</Label>
+                <Label htmlFor="humidity">Humidity (%) [15 - 99]</Label>
                 <Input
                   id="humidity"
                   name="humidity"
                   type="number"
                   step="0.01"
-                  placeholder="0.0"
+                  placeholder="15.0"
                   value={formData.humidity}
                   onChange={handleChange}
                   required
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="ph">pH</Label>
+                <Label htmlFor="ph">pH [3.5 - 9.9]</Label>
                 <Input
                   id="ph"
                   name="ph"
                   type="number"
                   step="0.01"
-                  placeholder="0.0"
+                  placeholder="3.5"
                   value={formData.ph}
                   onChange={handleChange}
                   required
                 />
               </div>
               <div className="space-y-2 col-span-2">
-                <Label htmlFor="rainfall">Rainfall (mm)</Label>
+                <Label htmlFor="rainfall">Rainfall (mm) [20 - 298]</Label>
                 <Input
                   id="rainfall"
                   name="rainfall"
                   type="number"
                   step="0.01"
-                  placeholder="0.0"
+                  placeholder="20.0"
                   value={formData.rainfall}
                   onChange={handleChange}
                   required
