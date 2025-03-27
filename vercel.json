@@ -1,0 +1,11 @@
+{
+    "functions": {
+      "src/app/api/predict/route.ts": {
+        "runtime": "nodejs18.x",
+        "memory": 1024
+      }
+    },
+    "buildCommand": "npm run build",
+    "installCommand": "npm install",
+    "framework": "nextjs"
+  }
