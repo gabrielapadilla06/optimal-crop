@@ -1,8 +1,8 @@
-import pickle
 import json
 import sys
 import numpy as np
 import os
+from joblib import load
 
 # Read input data from stdin
 input_data = json.load(sys.stdin)
@@ -19,9 +19,8 @@ features = [
 ]
 
 # Load the model
-model_path = os.path.join(os.path.dirname(__file__), 'model.pkl')
-with open(model_path, 'rb') as f:
-    model = pickle.load(f)
+model_path = os.path.join(os.path.dirname(__file__), 'model.joblib')
+model = load(model_path)  # Remove the unnecessary file open - joblib.load handles this
 
 # Convert to numpy array and reshape for prediction
 features_array = np.array(features).reshape(1, -1)

@@ -27,10 +27,10 @@ def parse_markdown(md_file):
     return html_content
 
 # Read and parse the formulations.md file
-md_file = "src/data/information.md"  # Assuming it's in the data folder
+md_file = "src/data/information.md" 
 formulations_text = parse_markdown(md_file)
 
-# Split the text into meaningful chunks (e.g., per ingredient or section)
+# Split the text into chunks
 # Here we'll simply use each line as a separate chunk
 formulations_lines = formulations_text.split("\n")
 

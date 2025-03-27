@@ -54,17 +54,6 @@ export async function POST(request: NextRequest) {
 
 async function runPythonPrediction(data: PredictionInput): Promise<string> {
   return new Promise((resolve, reject) => {
-    // Determine the Python executable based on the platform
-    const isPythonInstalled = async () => {
-      try {
-        const pythonProcess = spawn(process.platform === "win32" ? "python" : "python3", ["--version"])
-        return new Promise((resolve) => {
-          pythonProcess.on("exit", (code) => resolve(code === 0))
-        })
-      } catch {
-        return false
-      }
-    }
 
     const scriptPath = path.join(process.cwd(), "src", "python", "predict.py")
 

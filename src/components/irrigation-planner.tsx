@@ -370,16 +370,7 @@ export function IrrigationPlanner() {
       const irrigationFrequency = crop.irrigationSchedule[season]
 
       // Handle the case where irrigationFrequency is "rare"
-      let needsIrrigation = false
-
-      if (irrigationFrequency === "rare") {
-        // For "rare" irrigation, we'll only irrigate on specific days
-        // For example, only on days 15, 45, and 75 of the growth cycle
-        needsIrrigation = [15, 45, 75].includes(dayCount)
-      } else {
-        // For numeric frequencies, use the modulo operation
-        needsIrrigation = dayCount % (irrigationFrequency as number) === 0
-      }
+      let needsIrrigation = dayCount % (irrigationFrequency as number) === 0
 
       plan.push({
         date: new Date(currentDate),
